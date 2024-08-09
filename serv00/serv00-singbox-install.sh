@@ -522,7 +522,7 @@ EOF
 
 use_previous_config() {
   last_config_file=$(pwd)/$WORKDIR/$save_var_file
-  echo "正在读取上次存储的文件路径：\n${last_config_file}"
+  echo "正在读取上次存储的文件路径：${last_config_file}"
   if [ -e $last_config_file ]; then
     cd $WORKDIR
     source $last_config_file
