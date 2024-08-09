@@ -169,6 +169,17 @@ EOF
 # Download Dependency Files
 download_singbox() {
 
+  # 输出所有配置
+  echo -e "\n${yellow}所有配置如下：${re}"
+  echo "TCP端口: $vmess_port"
+  echo "UDP端口: $hy2_port"
+  echo "UDP端口: $tuic_port"
+  echo "UUID: $UUID"
+  echo "哪吒域名: $NEZHA_SERVER"
+  echo "哪吒端口: $NEZHA_PORT"
+  echo "哪吒密钥: $NEZHA_KEY"
+  echo "ARGO域名: $ARGO_DOMAIN"
+
   red "===下载sing-box文件==="
 
   echo $PWD/$save_var_file
@@ -416,18 +427,6 @@ EOF
 
 # running files
 run_sb() {
-
-  # 输出所有配置
-  echo -e "\n${yellow}所有配置如下：${re}"
-
-  echo "TCP端口: $vmess_port"
-  echo "UDP端口: $hy2_port"
-  echo "UDP端口: $tuic_port"
-  echo "UUID: $UUID"
-  echo "哪吒域名: $NEZHA_SERVER"
-  echo "哪吒端口: $NEZHA_PORT"
-  echo "哪吒密钥: $NEZHA_KEY"
-  echo "ARGO域名: $ARGO_DOMAIN"
 
   if [ -e npm ]; then
     tlsPorts=("443" "8443" "2096" "2087" "2083" "2053")
